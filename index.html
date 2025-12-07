@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vos Suggestions - Famivest</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      width: 100%;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 40px 30px;
+      text-align: center;
+      color: white;
+    }
+
+    .header h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .header p {
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    .icon {
+      margin-bottom: 15px;
+    }
+
+    .icon img {
+      width: 80px;
+      height: auto;
+    }
+
+    .content {
+      padding: 40px 30px;
+    }
+
+    .intro {
+      margin-bottom: 30px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    label {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      color: #333;
+      font-weight: 500;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    input[type="email"],
+    textarea {
+      padding: 14px 16px;
+      border: 2px solid #e0e0e0;
+      border-radius: 10px;
+      font-size: 16px;
+      font-family: inherit;
+      transition: all 0.3s ease;
+      background: #f9f9f9;
+    }
+
+    input[type="email"]:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #667eea;
+      background: white;
+      box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+    }
+
+    input[type="email"]:hover,
+    textarea:hover {
+      border-color: #b0b0b0;
+    }
+
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    button {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 16px 32px;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .feature-card {
+      background: #f5f5f5;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover {
+      background: #667eea;
+      color: white;
+      transform: translateY(-3px);
+    }
+
+    .feature-icon {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .feature-text {
+      font-size: 13px;
+      font-weight: 500;
+    }
+
+    @media (max-width: 600px) {
+      .header h1 {
+        font-size: 26px;
+      }
+      
+      .content {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="icon">
+        <img src="https://famivest.com/images/logo_200px.png" alt="Logo Famivest">
+      </div>
+      <h1>Vos Idées Comptent</h1>
+      <p>Aidez-nous à améliorer Famivest</p>
+    </div>
+    
+    <div class="content">
+      <div class="intro">
+       Vous avez une suggestion pour améliorer notre site ? Nous sommes à l'écoute de vos idées pour rendre l'expérience encore meilleure pour tous. Le développeur lira votre message et en prendra compte. Et peut-être que vos suggestions seront ajoutées dans la prochaine mise à jour !
+      </div>
+
+      <div class="features">
+        <div class="feature-card">
+          <div class="feature-icon">🎨</div>
+          <div class="feature-text">Design</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <div class="feature-text">Fonctionnalités</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📱</div>
+          <div class="feature-text">Navigation</div>
+        </div>
+      </div>
+
+      <form action="https://formspree.io/f/xblnajvo" method="POST">
+        <label>
+          Votre email
+          <input type="email" name="email" placeholder="contact@famivest" required>
+        </label>
+        
+        <label>
+          Votre suggestion
+          <textarea name="message" placeholder="Partagez votre idée pour améliorer le site..." required></textarea>
+        </label>
+        
+        <button type="submit">Envoyer ma suggestion</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
